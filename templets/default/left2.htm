@@ -1,0 +1,10 @@
+<p class="w100 left e_name">产品分类</p>
+				<ul class="e_list w100 left">
+				    {dede:sql sql="SELECT typename,typedir,defaultname FROM dede_arctype where reID = 3 ORDER BY sortrank ASC " }  
+<li><a href="[field:typedir function='str_replace("{cmspath}","",@me)'/]/[field:defaultname/]">[field:typename/]</a></li>
+{/dede:sql} 
+				</ul>
+				<p class="w100 left e_name mat10">联系方式</p>
+				<p class="e_contact w100 left" style="font-size:12px; line-height:25px;">
+				<strong>徐州华联玻璃制品有限公司</strong><br />地址：徐州市马坡镇八段工业区<br />联系人：陈效宇<br />手机：13375121816 13382670606<br />电话：0516-85101378<br />传真：0516-85100111<br /> Q Q:346014986<br />E-mail：a5101378@126.com<br />网址：http://www.867788.com<br />
+				</p>

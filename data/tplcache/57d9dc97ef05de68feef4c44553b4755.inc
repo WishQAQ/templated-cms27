@@ -1,0 +1,2 @@
+[field:content function="cn_substr(@me,180)"/]
+　　

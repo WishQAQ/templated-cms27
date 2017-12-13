@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+
+<link href="{dede:global.cfg_templets_skin/}/style/style.css" rel="stylesheet" type="text/css" />
+<script src="{dede:global.cfg_templets_skin/}/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/common.js" type="text/javascript"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.nav.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.kinMaxShow-1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #999999}
+.STYLE2 {color: #FFFFFF}
+.STYLE3 {color: #FFFFFF; font-weight: bold; }
+-->
+</style>
+</head>
+<body style="background-color:#FFF;">
+<div class="w100 left head" style="background-color:#FFFFFF;">
+     <div class="w1000">
+          <div class="left"><a href="{dede:global.cfg_cmsurl/}/"><img src="{dede:global.cfg_templets_skin/}/images/logo.jpg" width="230px" height="78px"/></a></div>
+		  <div class="nav">
+  <ul class="nav__menu">
+    <li class="nav__menu-item"><a href="{dede:global.cfg_cmsurl/}/">首页</a></li>
+
+      	{dede:channelartlist type='top' row='10'}
+      	<li class="nav__menu-item"><a href='{dede:field name="typeurl"/}'><span>{dede:field name="typename"/}</span></a>
+                  
+
+            <div class="nav__menu-items" id="nav__menu-items" data-id="{dede:field name='id'/}"  >
+
+               {dede:sql sql="SELECT typename,typedir,defaultname FROM dede_arctype where reID =~id~  ORDER BY sortrank ASC " }  
+               <a href="[field:typedir function='str_replace("{cmspath}","",@me)'/]/[field:defaultname/]">[field:typename/]</a>
+                {/dede:sql} 
+        
+              </div>
+ 
+        </li>
+      	{/dede:channelartlist}
+
+    
+  </ul>
+</div>
+  </div>
+</div>
+
+
+
+
+<div class="clear"></div>
+<div class="w100 left focus">
+     <div id="kinMaxShow">
+
+{dede:arclist row=10 orderby=pubdate typeid='8' titlelen='100'}
+<div><a href="[field:arcurl/]"><img src="[field:litpic/]"/></a></div>
+{/dede:arclist}
+
+     </div>
+</div>
+
+<div class="clear"></div>
+
+<div class="w100" style="background-color:#F3F3F3;">
+<div class="w1000 mat10"><table width="1000" height="335" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="343" valign="top"><img src="{dede:global.cfg_templets_skin/}/images/hl_1.jpg" width="343" height="335" border="0" /></td>
+    <td width="350" valign="top"><img src="{dede:global.cfg_templets_skin/}/images/hl_2.jpg" width="350" height="335" border="0" /></td>
+    <td width="307" valign="top"><img src="{dede:global.cfg_templets_skin/}/images/hl_3.jpg" width="307" height="335" border="0" /></td>
+  </tr>
+</table>
+</div>
+</div>
+
+<div class="clear"></div>
+<div class="w1000 mat10"><table width="1000" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><a href="{dede:global.cfg_cmsurl/}/a/chanpinzhanshi/index.html"><img src="{dede:global.cfg_templets_skin/}/images/hl_4.jpg" width="1000" height="70" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td><table width="1000" border="0" cellspacing="15" cellpadding="0">
+      <tr>
+        <td><div class="w100 left">
+          <div class="w100 left in_product"> 
+		  
+		  
+		  
+{dede:arclist row=10 orderby=pubdate typeid='3' titlelen='100'}
+			<div style="width:180px; height:202px; float:left; margin-right:10px; margin-bottom:10px;">
+            <table width="180" height="202" border="0" cellpadding="0" cellspacing="1" bgcolor="#999999">
+              <tr>
+                <td width="180" height="140" bgcolor="#FFFFFF"><div align="center" style="width:180px; height:140px; overflow:hidden;" ><a href="[field:arcurl/]"><img src="[field:litpic/]" height="140"/></a></div></td>
+              </tr>
+              <tr>
+                <td height="55" bgcolor="#FFFFFF"><div align="center"><a href="[field:arcurl/]" style="color:#000000;">[field:title /]</a></div></td>
+              </tr>
+            </table>
+			</div>
+{/dede:arclist}
+		  
+		  
+
+			
+			
+			
+			 </div>
+        </div></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</div>
+<div class="clear"></div>
+<div class="w100" style="background-color:#F3F3F3;">
+<div class="w1000 mat10" style="background-color:#F3F3F3;"><table width="1000" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="{dede:global.cfg_templets_skin/}/images/hl_5.jpg" width="1000" height="70" border="0" /></td>
+  </tr>
+  <tr>
+    <td><table width="1000" height="325" border="0" cellpadding="0" cellspacing="15">
+      <tr>
+        <td width="313" valign="top"><table width="313" height="295" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+          <tr>
+            <td valign="top"><table width="313" height="60" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td><div align="center">公司简介</div></td>
+              </tr>
+            </table>
+              <table width="313" height="195" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td valign="top"><table width="313" height="103" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="10">&nbsp;</td>
+                      <td valign="top"><img src="{dede:global.cfg_templets_skin/}/images/hl_8.jpg" width="293" height="103" /></td>
+                      <td width="10">&nbsp;</td>
+                    </tr>
+                  </table>
+                    <table width="313" height="90" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="10" valign="top">&nbsp;</td>
+                        <td valign="top"><div align="left" style="line-height:22px; font-size:12px;">{dede:sql sql='Select content from dede_arctype where id=1'}
+				[field:content function="cn_substr(@me,180)"/]
+　　{/dede:sql}</div></td>
+                        <td width="10" valign="top">&nbsp;</td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table>
+              <table width="313" height="40" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td><a href="{dede:global.cfg_cmsurl/}/a/gongsijianjie/index.html"><img src="{dede:global.cfg_templets_skin/}/images/hl_7.jpg" width="313" height="40" border="0" /></a></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table></td>
+        <td width="313"><table width="313" height="295" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+          <tr>
+            <td valign="top"><table width="313" height="60" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td><div align="center">资质荣誉</div></td>
+                </tr>
+              </table>
+                <table width="313" height="195" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td><table width="313" height="175" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="10">&nbsp;</td>
+                        <td valign="top">
+						{dede:arclist row=1 orderby=pubdate typeid='9' titlelen='100'}
+						<a href="[field:arcurl/]"><img src="[field:litpic/]" width="293" height="175" border="0" /></a>
+						{/dede:arclist}
+						</td>
+                        <td width="10">&nbsp;</td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table>
+              <table width="313" height="40" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td><a href="{dede:global.cfg_cmsurl/}/a/gongsijianjie/zizhirongyu/index.html"><img src="{dede:global.cfg_templets_skin/}/images/hl_7.jpg" width="313" height="40" border="0" /></a></td>
+                  </tr>
+              </table></td>
+          </tr>
+        </table></td>
+        <td width="314"><table width="313" height="295" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+          <tr>
+            <td valign="top"><table width="313" height="60" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td><div align="center">联系我们</div></td>
+                </tr>
+              </table>
+                <table width="313" height="195" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td valign="top"><table width="313" height="103" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td width="10">&nbsp;</td>
+                          <td valign="top"><img src="{dede:global.cfg_templets_skin/}/images/hl_9.jpg" width="293" height="103" /></td>
+                          <td width="10">&nbsp;</td>
+                        </tr>
+                      </table>
+                        <table width="313" height="90" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="10" valign="top">&nbsp;</td>
+                            <td valign="top"><div align="left" style="line-height:22px; font-size:12px;">江苏省徐州市铜山区马坡镇八段工业区<br />
+                              联系人：陈效宇<br />
+                              手机：13375121816 13382670606</div></td>
+                            <td width="10" valign="top">&nbsp;</td>
+                          </tr>
+                      </table></td>
+                  </tr>
+                </table>
+                <table width="313" height="40" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td><a href="{dede:global.cfg_cmsurl/}/a/lianxiwomen/index.html"><img src="{dede:global.cfg_templets_skin/}/images/hl_7.jpg" width="313" height="40" border="0" /></a></td>
+                  </tr>
+              </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</div></div>
+
+<div class="clear"></div>
+<div class="w1000 mat10">
+<table width="1000" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+          
+</td>
+    </tr>
+</table>
+</div>
+
+
+
+
+
+
+
+<div class="clear"></div>
+<div class="w1000 mat10">
+  <table width="1000" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><img src="{dede:global.cfg_templets_skin/}/images/hl_10.jpg" width="1000" height="70" /></td>
+    </tr>
+  </table>
+  <table width="1000" border="0" cellspacing="15" cellpadding="0">
+  <tr>
+    <td><div class="w100 left">
+          <div class="w100 left in_video">
+            <div class="w100 left in_pix_list mat15" style="height:auto">
+
+		   <div class="img-scroll">
+ <span class="prev"><img src="{dede:global.cfg_templets_skin/}/images/img20.jpg"></span>
+    <span class="next"><img src="{dede:global.cfg_templets_skin/}/images/img21.jpg"></span>
+    <div class="img-list">
+     <ul>
+
+{dede:arclist row=10 orderby=pubdate typeid='6' titlelen='100'}
+<li><a href="[field:arcurl/]"><img src="[field:litpic/]"/><br />[field:title /]</a></li>
+{/dede:arclist}
+
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+ function DY_scroll(wraper,prev,next,img,speed,or)
+ { 
+  var wraper = $(wraper);
+  var prev = $(prev);
+  var next = $(next);
+  var img = $(img).find('ul');
+  var w = img.find('li').outerWidth(true);
+  var s = speed;
+  next.click(function()
+       {
+        img.animate({'margin-left':-w},function()
+                  {
+                   img.find('li').eq(0).appendTo(img);
+                   img.css({'margin-left':0});
+                   });
+        });
+  prev.click(function()
+       {
+        img.find('li:last').prependTo(img);
+        img.css({'margin-left':-w});
+        img.animate({'margin-left':0});
+        });
+  if (or == true)
+  {
+   ad = setInterval(function() { next.click();},s*1000);
+   wraper.hover(function(){clearInterval(ad);},function(){ad = setInterval(function() { next.click();},s*1000);});
+
+  }
+ }
+ DY_scroll('.img-scroll','.prev','.next','.img-list',3,true);// true为自动播放，不加此参数或false就默认不自动
+</script>
+          </div></div>
+</div></td>
+    </tr>
+</table>
+</div>
+
+
+
+
+
+
+
+<div class="clear"></div>
+<div class="w1000 mat10">
+<table width="1000" border="0" cellspacing="15" cellpadding="0">
+  <tr>
+    <td><div class="w100 left">
+          <div class="in_name w100 left">
+               <p class="left in_name1">友情链接</p></div>
+          <div class="w100 left in_video mat15" style="font-size:12px;">{dede:flink/}</div>
+</div></td>
+    </tr>
+</table>
+</div>
+<div class="clear"></div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>
